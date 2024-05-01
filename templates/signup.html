@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+   <head>
+    {% load static %}
+      <meta charset="utf-8">
+      <title>Signup</title>
+      <link rel="stylesheet" href="{% static 'form.css' %}">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+   </head>
+   <body>
+      <div class="bg-img">
+         <div class="content">
+            <header>Signup</header>
+            <form id="signupForm" method="POST">
+               {% csrf_token %}
+               <div class="field">
+                  <span class="fa fa-user"></span>
+                  <input type="text" required placeholder="Full Name" id="fullName">
+               </div>
+               <div class="field">
+                  <span class="fa fa-envelope"></span>
+                  <input type="email" required placeholder="Email" id="email">
+               </div>
+               <div class="field">
+                  <span class="fa fa-phone"></span>
+                  <input type="tel" required placeholder="Phone" id="phone">
+               </div>
+               <div class="field space">
+                  <span class="fa fa-lock"></span>
+                  <input type="password" class="pass-key" required placeholder="Password" id="password">
+               </div>
+               <div class="field">
+                  <input type="submit" value="SIGN UP">
+               </div>
+            </form>
+            <div class="signup">
+               Already have an account?
+               <a href="{% url 'login'%}">Login Now</a>
+            </div>
+         </div>
+      </div>
+      <script>
+         // Function to handle form submission
+         document.getElementById('signupForm').addEventListener('submit', function(event) {
+            event.preventDefault(); 
+
+            const fullName = document.getElementById('fullName').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            const password = document.getElementById('password').value;
+
+            window.location.href = "{% url 'login'%}";
+         });
+      </script>
+   </body>
+</html>

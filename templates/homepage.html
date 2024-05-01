@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'homepage.css'%}" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Road Runner</title>
+</head>
+
+<body>
+    <!-- navigation bar -->
+    <nav class="nav">
+        <div class="logo">
+            <h1>RoadRunner</h1>
+            <!-- <img src="{% static 'logo.webp' %}" alt="logo"> -->
+        </div>
+        <div class="item">
+            <a class="homebtn" href="#home">Home</a>
+            <a href="{%url 'book'%}">Rent Car</a>
+            <a href="#contact">Contact</a>
+            <a href="#about">About</a>
+        </div>
+
+        <div class="btn">
+             <a href="{% url 'login'%}" class="login">Login</a>   <!--login form -->
+            <a href="{% url 'signup'%}" class="signup">Sign Up</a>  <!--regester form -->
+        </div>
+    </nav>
+
+    <!-- hero section -->
+    <div id="home" class="home">
+        <div class="main">
+            <div class="left">
+                <p class="txt1"><span style="color: red;">Rent</span> A Car Today With Easy And Simple Way</span></p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id harum quis qui fugiat facilis rem nisi laboriosam quo, iusto minus, ea a? Debitis ab laboriosam officia molestias ipsam labore veritatis?</p>
+                <div class="btn"> 
+                    <a href="{% url 'book'%}" class="book">Rent a car</a>  <!--booking form-->
+                </div>
+            </div>
+
+            <div class="right">
+                <img src="{% static 'audi.webp' %}" alt="Car">
+            </div>
+        </div>
+    </div>
+
+    <!--Car Details-->
+    <section class="car">
+        <div class="txt">
+            <p class="txt1">Latest <span>Inventory</span></p>
+            <p class="txt2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, ipsa!</p>
+        </div>
+
+        <div class="main">
+            <div class="box">
+                <img style="width: 365px;" src="{% static 'audi.webp' %}"  alt="">
+                <div class="details">
+
+                    <p class="carname">Audi R8</p>
+
+                    <div class="review">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star-half-stroke"></i>
+                        <p>( 10k Reviews )</p>
+                    </div>
+
+                    <div class="feature">
+                        <p><i class="fa-solid fa-chair"></i> 2 Seat</p>
+                        <p><i class="fa-solid fa-charging-station"></i> 2 Seat</p>
+                        <p><i class="fa-solid fa-car-battery"></i> 2 Seat</p>
+                        <p><i class="fa-solid fa-cable-car"></i> 2 Seat</p>
+                        <p><i class="fa-solid fa-car-side"></i> 2 Seat</p>
+                        <p><i class="fa-solid fa-caravan"></i> 2 Seat</p>
+                    </div>
+
+                    <div class="price">
+                        <p>3 Crore</p>
+                        <a href="{% url 'book'%}" class="book">Book Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="box">
+                <img style="width: 365px;" src="{% static 'lexus.webp' %}" alt="">
+               
+                <div class="details">
+                    <p class="carname">lexus</p>
+
+                    <div class="review">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star-half-stroke"></i>
+                        <p>( 9k Reviews )</p>
+                    </div>
+
+                    <div class="feature">
+                        <p><i class="fa-solid fa-chair"></i> 4 Seat</p>
+                        <p><i class="fa-solid fa-charging-station"></i> 4 Seat</p>
+                        <p><i class="fa-solid fa-car-battery"></i> 4 Seat</p>
+                        <p><i class="fa-solid fa-cable-car"></i> 4 Seat</p>
+                        <p><i class="fa-solid fa-car-side"></i> 4 Seat</p>
+                        <p><i class="fa-solid fa-caravan"></i> 4 Seat</p>
+                    </div>
+
+                    <div class="price">
+                        <p>3.5 Crore</p>
+                        <a href="{% url 'book'%}" class="book">Book Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="box">
+                <img style="width: 365px; " src="{% static 'bmw.webp' %}"  alt="">
+                <div class="details">
+
+                    <p class="carname">BMW</p>
+
+                    <div class="review">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star-half-stroke"></i>
+                        <p>( 10k Reviews )</p>
+                    </div>
+
+                    <div class="feature">
+                        <p><i class="fa-solid fa-chair"></i> 4 Seat</p>
+                        <p><i class="fa-solid fa-charging-station"></i> 4 Seat</p>
+                        <p><i class="fa-solid fa-car-battery"></i> 4 Seat</p>
+                        <p><i class="fa-solid fa-cable-car"></i> 4 Seat</p>
+                        <p><i class="fa-solid fa-car-side"></i> 4 Seat</p>
+                        <p><i class="fa-solid fa-caravan"></i> 4 Seat</p>
+                    </div>
+
+                    <div class="price">
+                        <p>2.5 Crore</p>
+                        <a href="{% url 'book'%}" class="book">Book Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="box">
+                <img style="width: 365px; " src="{% static 'lambo.webp' %}"  alt="">
+                <div class="details">
+
+                    <p class="carname">Lamborghini Urus</p>
+
+                    <div class="review">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star-half-stroke"></i>
+                        <p>( 10k Reviews )</p>
+                    </div>
+
+                    <div class="feature">
+                        <p><i class="fa-solid fa-chair"></i> 4 Seat</p>
+                        <p><i class="fa-solid fa-charging-station"></i> 4 Seat</p>
+                        <p><i class="fa-solid fa-car-battery"></i> 4 Seat</p>
+                        <p><i class="fa-solid fa-cable-car"></i> 4 Seat</p>
+                        <p><i class="fa-solid fa-car-side"></i> 4 Seat</p>
+                        <p><i class="fa-solid fa-caravan"></i> 4 Seat</p>
+                    </div>
+
+                    <div class="price">
+                        <p>3 Crore</p>
+                        <a href="{% url 'book'%}" class="book">Book Now</a>
+                    </div>
+                </div>
+            </div>
+
+             <div class="box">
+                <img style="width: 365px;" src="{% static 'mustang.webp' %}" alt="">
+               
+                <div class="details">
+                    <p class="carname">Mustang GT</p>
+
+                    <div class="review">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star-half-stroke"></i>
+                        <p>( 12k Reviews )</p>
+                    </div>
+
+                    <div class="feature">
+                        <p><i class="fa-solid fa-chair"></i> 2 Seat</p>
+                        <p><i class="fa-solid fa-charging-station"></i> 2 Seat</p>
+                        <p><i class="fa-solid fa-car-battery"></i> 2 Seat</p>
+                        <p><i class="fa-solid fa-cable-car"></i> 2 Seat</p>
+                        <p><i class="fa-solid fa-car-side"></i> 2 Seat</p>
+                        <p><i class="fa-solid fa-caravan"></i> 2 Seat</p>
+                    </div>
+
+                    <div class="price">
+                        <p>4 Crore</p>
+                        <a href="{% url 'book'%}" class="book">Book Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="box">
+                <img style="width: 365px; " src="{% static 'rover.webp' %}"  alt="">
+                <div class="details">
+
+                    <p class="carname">Range Rover</p>
+
+                    <div class="review">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star-half-stroke"></i>
+                        <p>( 20k Reviews )</p>
+                    </div>
+
+                    <div class="feature">
+                        <p><i class="fa-solid fa-chair"></i> 4 Seat</p>
+                        <p><i class="fa-solid fa-charging-station"></i> 4 Seat</p>
+                        <p><i class="fa-solid fa-car-battery"></i> 4 Seat</p>
+                        <p><i class="fa-solid fa-cable-car"></i> 4 Seat</p>
+                        <p><i class="fa-solid fa-car-side"></i> 4 Seat</p>
+                        <p><i class="fa-solid fa-caravan"></i> 4 Seat</p>
+                    </div>
+
+                    <div class="price">
+                        <p>3.22 Crore</p>
+                        <a href="{% url 'book'%}" class="book">Book Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- <div class="btn">
+                <input class="viewall"  type="button" value="View All">
+            </div> -->
+        </div>
+    </section>
+
+
+    <!-- support/about section -->
+    <section id="about" class="support">
+        <div class="txt">
+            <p class="txt1">Why <span>Choose</span> Us</p>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. At, cupiditate!</p>
+        </div>
+
+        <div class="main">
+            <div class="box">
+                <i class="fa-solid fa-phone"></i>
+                <div class="txt">
+                    <p class="txt1">24/7 Support</p>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore doloremque sequi animi ab
+                        corporis, necessitatibus eum cum vel rerum nisi.</p>
+                </div>
+            </div>
+
+            <div class="box">
+                <i class="fa-solid fa-flag-checkered"></i>
+                <div class="txt">
+                    <p class="txt1">Best Price</p>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore doloremque sequi animi ab
+                        corporis, necessitatibus eum cum vel rerum nisi.</p>
+                </div>
+            </div>
+
+            <div class="box">
+                <i class="fa-solid fa-certificate"></i>
+                <div class="txt">
+                    <p class="txt1">Verified License</p>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore doloremque sequi animi ab
+                        corporis, necessitatibus eum cum vel rerum nisi.</p>
+                </div>
+            </div>
+
+            <div class="box">
+                <i class="fa-regular fa-circle-xmark"></i>
+                <div class="txt">
+                    <p class="txt1">Free Cancelation</p>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore doloremque sequi animi ab
+                        corporis, necessitatibus eum cum vel rerum nisi.</p>
+                </div>
+            </div>
+            <div class="txt">
+            <p class="txt1">Our <span>Achievement</span></p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, provident.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Achivements -->
+    <section class="achie">
+        <div class="main">
+            <div class="box">
+                <p class="txt1">4000+</p>
+                <p>Active Member</p>
+            </div>
+
+            <div class="box">
+                <p class="txt1">3000+</p>
+                <p>Car Color</p>
+            </div>
+
+            <div class="box">
+                <p class="txt1">6000+</p>
+                <p>Car Model</p>
+            </div>
+
+            <div class="box">
+                <p class="txt1">10k</p>
+                <p>Positive Rating</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="start">
+        <div class="main">
+            <div class="left">
+                <p class="txt1">Contact details</p>
+                <div class="contact-details">
+                    <!-- <h2>Contact Details</h2> -->
+                    <p><strong>Company Name:</strong> Your Company Name</p>
+                    <p><strong>Address:</strong> 123 Main Street, City, Country</p>
+                    <p><strong>Email:</strong> info@yourcompany.com</p>
+                    <p><strong>Phone:</strong> +1 (123) 456-7890</p> 
+                </div>
+                <!-- <p class="txt2">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus ipsa eos neque quo consectetur totam perferendis aut quos sequi expedita.</p> -->
+                <div class="btn">
+                    <!-- <a href="#" class="contact" >Contact Us</a> -->
+                    <a id="contactButton" class="contact">Contact Us</a>
+                </div>
+                
+            </div>
+
+            <div class="right">
+                <img src="{% static 'lambo.webp' %}" alt="">
+            </div>
+        </div>
+    </section>
+
+<!-- contact form -->
+    <div id="contactFormContainer" class="contact-form-container">
+        <div class="contact-form">
+            <button id="closeContactForm" class="close-btn">&times;</button> 
+            <h2>Contact Us</h2>
+            <form method="post">
+                {% csrf_token %}
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email address</label>
+                    <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email" required>
+                </div>
+                <div class="form-group">
+                <label for="message">Message</label>
+                <textarea class="form-control" id="message" name="message" rows="5" placeholder="Enter your message" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <!--Footer-->
+    <footer class="foot">
+        <div class="copy">
+            <p>Copyright &copy; 2024 RoadRunner</p>
+        </div>
+    </footer>   
+
+
+    <script>
+        // Get the button and the contact form container
+        const contactButton = document.getElementById('contactButton');
+        const contactFormContainer = document.getElementById('contactFormContainer');
+        const closeContactForm = document.getElementById('closeContactForm');
+
+        // Toggle visibility of the contact form container
+        contactButton.addEventListener('click', function() {
+        contactFormContainer.style.display = 'block';
+        });
+
+        // Close contact form
+        closeContactForm.addEventListener('click', function() {
+        contactFormContainer.style.display = 'none';
+        });
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
